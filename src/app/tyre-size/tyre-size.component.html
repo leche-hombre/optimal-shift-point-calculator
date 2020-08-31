@@ -1,0 +1,23 @@
+<mat-card>
+    <h3>Tyre Size Calculator</h3>
+    <table cellspacing="20"><tr>
+        <td><mat-form-field>
+          <mat-label>Width (mm)</mat-label>
+          <input [(ngModel)]='tyreWidth' matInput placeholder="205">
+        </mat-form-field></td>
+        <td><mat-form-field>
+          <mat-label>Profile %</mat-label>
+          <input [(ngModel)]='tyreProfile' matInput placeholder="75">
+        </mat-form-field></td>
+        <td><mat-form-field>
+          <mat-label>Rim (in)</mat-label>
+          <input [(ngModel)]="tyreRim" matInput placeholder="15">
+        </mat-form-field></td>
+        <td>
+            <button mat-stroked-button (click)="calculateDiameter()">Calculate</button>
+        </td>
+      </tr></table>
+      <div *ngIf="tyreDiameter">
+            <span>{{tyreWidth}}/{{tyreProfile}} <strong>R</strong>{{tyreRim}} has a diameter of {{tyreDiameter}}"</span>
+      </div>
+</mat-card>

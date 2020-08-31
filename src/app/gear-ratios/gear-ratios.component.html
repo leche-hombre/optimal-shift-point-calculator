@@ -1,0 +1,37 @@
+<mat-card>
+    <h3>Gear Ratios</h3>
+    <form>
+        <mat-form-field>
+            <mat-label>1st (low):</mat-label>
+            <input matInput [(ngModel)]="firstGearRatio" name="firstGearRatio" placeholder="3.34">
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>2nd:</mat-label>
+            <input matInput [(ngModel)]="secondGearRatio" name="secondGearRatio" placeholder="2.06">
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>3rd:</mat-label>
+            <input matInput [(ngModel)]="thirdGearRatio" name="thirdGearRatio" placeholder="1.33">
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>4th:</mat-label>
+            <input matInput [(ngModel)]="fourthGearRatio" name="fourthGearRatio" placeholder="1">
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>5th:</mat-label>
+            <input matInput [(ngModel)]="fifthGearRatio" name="fifthGearRatio" placeholder="0.86">
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>6th:</mat-label>
+            <input matInput [(ngModel)]="sixthGearRatio" name="sixthGearRatio" placeholder="0.77">
+        </mat-form-field>
+    </form>
+    <h3>Final Drive Ratio</h3>
+    <form>
+        <mat-form-field>
+                <mat-label>Final drive ratio</mat-label>
+                <input matInput [(ngModel)]="finalDriveRatio" name="finalDriveRatio" placeholder="3.14">
+        </mat-form-field>
+    </form>
+    <button mat-raised-button (click)="updateRatios()">Update</button>
+</mat-card>
